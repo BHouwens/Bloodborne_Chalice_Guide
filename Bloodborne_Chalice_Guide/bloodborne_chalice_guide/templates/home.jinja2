@@ -5,14 +5,22 @@
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 </head>
 <body>
-  <div>
+  <nav>
     <ul>
     {% for chalice in chalices %}
-      {% for k, v in chalice.items() %}
-        <li>{{ k }}</li>
+      {% for name in chalice.keys() %}
+        <li>{{ name }}</li>
       {% endfor %}
     {% endfor %}
     </ul>
-  </div>
+  </nav>
+
+  <ul>
+   {% for heading in headings %}
+    {% if not heading == 'Timestamp' %}
+      <li>{{ heading }}</li>
+    {% endif %}
+   {% endfor %}
+  </ul>
 </body>
 </html>
