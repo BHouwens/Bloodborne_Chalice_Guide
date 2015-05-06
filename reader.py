@@ -1,5 +1,11 @@
 import csv
 
+
+'''
+	Function to read the CSV and turn entries into usable data.
+	It returns a list of dictionaries containing the chalice name as key and
+	all other info as another list of dictionaries.
+'''
 def reader(doc):
 	chalices = []
 	reader = csv.DictReader(doc, delimiter = ",")
@@ -28,6 +34,8 @@ def reader(doc):
 		chalices.append({row["Chalice Used"] : details_list})
 
 	return chalices
+
+	
 
 path = "Chalice Dungeon Submission Form (Responses) - Form Responses 1.csv"
 with open(path, "rb") as obj:
