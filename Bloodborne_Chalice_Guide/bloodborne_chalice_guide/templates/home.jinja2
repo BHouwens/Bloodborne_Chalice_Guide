@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Pyramid Web Application Development Framework</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+  <div>
+    <ul>
+    {% for chalice in chalices %}
+      {% for k, v in chalice.items() %}
+        <li>{{ k }}</li>
+      {% endfor %}
+    {% endfor %}
+    </ul>
+  </div>
+</body>
+</html>
