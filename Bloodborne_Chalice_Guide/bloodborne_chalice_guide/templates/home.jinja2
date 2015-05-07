@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Pyramid Web Application Development Framework</title>
+  <title>Bloodborne Chalice Guide</title>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+  <link rel="stylesheet" href="static/styles.css" type="text/css"/>
 </head>
 <body>
   <nav>
@@ -15,12 +16,11 @@
     </ul>
   </nav>
 
-  <ul>
-   {% for heading in headings %}
-    {% if not heading == 'Timestamp' %}
-      <li>{{ heading }}</li>
-    {% endif %}
-   {% endfor %}
+  <ul class="headings">
+    <li><a class="rites">Additional Rites</a></li>
+    <li><a class="glyph">Chalice Glyph</a></li>
+    <li><a class="weapons">Weapons</a></li>
+    <li><a class="materials">Materials</a></li>
   </ul>
 </body>
 </html>

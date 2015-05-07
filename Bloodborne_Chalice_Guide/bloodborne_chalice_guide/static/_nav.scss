@@ -1,0 +1,24 @@
+/* ----- NAV STUFF ----- */
+
+nav{
+	width: 30%;
+}
+
+nav, .headings{
+	float: left;
+}
+
+.headings{
+	width: 60%;
+}
+
+.headings li{
+	display: inline-block;
+}
+
+.headings a{
+	padding: 15px;
+	background: grey;
+	text-transform: uppercase;
+	cursor: pointer;
+}
