@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAEA,GAAG;EACF,KAAK,EAAE,GAAG;;AAGX,cAAc;EACb,KAAK,EAAE,IAAI;;AAGZ,SAAS;EACR,KAAK,EAAE,GAAG;;AAGX,YAAY;EACX,OAAO,EAAE,YAAY;;AAGtB,WAAW;EACV,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,IAAI;EAChB,cAAc,EAAE,SAAS;EACzB,MAAM,EAAE,OAAO",
-"sources": ["_nav.scss"],
-"names": [],
-"file": "styles.css"
-}

@@ -1,0 +1,15 @@
+/*----- CORE SHIT ------*/
+
+body{
+	background: url(../bg.jpg) no-repeat;
+}
+
+.shadow{
+	background: black;
+	position: fixed;
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	@include size(100%);
+}

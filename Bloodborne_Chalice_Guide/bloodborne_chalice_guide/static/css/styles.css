@@ -84,23 +84,33 @@
 * @param {Number} $num - The total number of images in the spritesheet
 * @param {String} $path - The path to the spritesheet
 */
+/*----- CORE SHIT ------*/
+body {
+  background: url(../bg.jpg) no-repeat; }
+
+.shadow {
+  background: black;
+  position: fixed;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%; }
+
 /* ----- NAV STUFF ----- */
 nav {
-  width: 30%; }
+  width: 60%; }
 
 nav, .headings {
   float: left; }
 
-.headings {
-  width: 60%; }
-
-.headings li {
-  display: inline-block; }
-
-.headings a {
-  padding: 15px;
+nav ul a {
+  padding: 10px;
   background: grey;
   text-transform: uppercase;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=styles.css.map */

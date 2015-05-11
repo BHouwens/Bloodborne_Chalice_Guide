@@ -1,24 +1,18 @@
 /* ----- NAV STUFF ----- */
 
 nav{
-	width: 30%;
+	width: 60%;
 }
 
 nav, .headings{
 	float: left;
 }
 
-.headings{
-	width: 60%;
-}
-
-.headings li{
-	display: inline-block;
-}
-
-.headings a{
-	padding: 15px;
+nav ul a{
+	padding: 10px;
 	background: grey;
 	text-transform: uppercase;
 	cursor: pointer;
+	display: block;
+	margin-bottom: 10px;
 }
