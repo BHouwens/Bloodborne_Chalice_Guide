@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from reader import Chalice_Builder
 
 app = Flask(__name__)
-data_path = 'data.csv'
+data_path = 'data/data.csv'
 
 
 @app.route('/')
