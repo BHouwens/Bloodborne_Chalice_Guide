@@ -1,1 +1,0 @@
-Bloodborne_Chalice_Guide README

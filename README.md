@@ -8,17 +8,7 @@ The game implements a "chalice" mechanic, in which players can descend into vari
 
 ## Using It
 
-The guide requires Python and Pip to be installed.
-
-If you really want to try it out, you can proceed with the following after cloning:
-
-    source venv/bin/activate
-    cd Bloodborne_Chalice_Guide
-    pip install -r requirements.txt
-
-That should get you up and running. You can then start the server up with:
-
-    pserve development.ini
+The guide requires Python and Pip to be installed and runs on the Flask micro-framework. It's very much still under development.
 
 ## Data
 

@@ -1,3 +1,0 @@
-      [paste.app_factory]
-      main = bloodborne_chalice_guide:main
-      
