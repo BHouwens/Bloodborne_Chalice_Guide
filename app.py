@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from reader import Chalice_Builder
 
 app = Flask(__name__)
 data_path = 'data.csv'
@@ -6,8 +7,7 @@ data_path = 'data.csv'
 
 @app.route('/')
 def home():
-	with open(data_path, 'rb') as doc:
-		data = reader(doc)
+	raw_data = Chalice_Builder(data_path)
 
 	return render_template('index.html')
 
