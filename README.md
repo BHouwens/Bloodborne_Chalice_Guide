@@ -10,6 +10,14 @@ The game implements a "chalice" mechanic, in which players can descend into vari
 
 The guide requires Python and Pip to be installed and runs on the Flask micro-framework. It's very much still under development.
 
+If you would like to take a quick look, you can run:
+
+    cd ~/Bloodborne_Chalice_Guide
+    pip install -r requirements.txt
+    python app.py
+    
+And then follow the terminal prompts.
+
 ## Data
 
 The info is compiled from submissions found [here] (https://docs.google.com/spreadsheets/d/18TVy5cDk6sNX0lc2dNQM2Q-SLv0_9QecQrtKR0sRb6Q/edit#gid=1095946635#button-dungeon).
