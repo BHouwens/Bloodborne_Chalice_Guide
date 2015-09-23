@@ -1,14 +1,8 @@
 from flask import Flask, render_template
-import csv
 
 app = Flask(__name__)
 data_path = 'data.csv'
 
-def reader(path):
-	reader = csv.DictReader(path, delimiter = ",")
-
-	for row in reader:
-		# do something with the csv row
 
 @app.route('/')
 def home():
