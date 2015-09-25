@@ -13,6 +13,7 @@ The guide requires Python and Pip to be installed and runs on the [Flask](http:/
 If you would like to take a quick look, you can run:
 
     cd ~/Bloodborne_Chalice_Guide
+    source venv/bin/activate
     pip install -r requirements.txt
     python app.py
     
