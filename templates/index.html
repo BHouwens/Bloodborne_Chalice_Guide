@@ -16,6 +16,11 @@
 		            {% endfor %}
             	</ul>
             </nav>
+            {% for glyph_set in glyphs %}
+                {% for glyph in glyph_set %}
+                    {{ glyph['glyph'] }}
+                {% endfor %}
+            {% endfor %}
         </div>
     </div>
 </body>

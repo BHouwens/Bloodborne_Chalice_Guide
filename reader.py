@@ -69,6 +69,10 @@ class Chalice_Builder:
 
 		return chalice
 
+if __name__ == "__main__":
+	test = Chalice_Builder('data/data.csv')
+	print test.chalices
+
 
 
 

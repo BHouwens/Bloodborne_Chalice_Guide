@@ -8,16 +8,18 @@ data_path = 'data/data.csv'
 @app.route('/')
 def home():
 	raw_data = Chalice_Builder(data_path)
-	chalices = []
+	chalice_names = []
+	glyphs = []
 
 
 	for item in raw_data.chalices:
-		chalices.append(item['name'])
+		chalice_names.append(item['name'])
+		glyphs.append(item['glyphs'])
 
 
 	return render_template('index.html',
-		names=chalices,
-		raw=['yebo'])
+		names=chalice_names,
+		glyphs=glyphs)
 
 
 if __name__ == "__main__":
