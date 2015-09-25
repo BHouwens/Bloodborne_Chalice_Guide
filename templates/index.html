@@ -16,10 +16,12 @@
 		            {% endfor %}
             	</ul>
             </nav>
-            {% for glyph_set in glyphs %}
-                {% for glyph in glyph_set %}
-                    {{ glyph['glyph'] }}
-                {% endfor %}
+
+            {% for glyph in glyphs %}
+                {% if glyph.name == names[0] %}
+                    <h1>{{ glyph.glyph }}</h1>
+                    <p>{{ glyph.notes }}</p>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

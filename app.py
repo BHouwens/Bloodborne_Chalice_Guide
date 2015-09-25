@@ -13,9 +13,16 @@ def home():
 
 
 	for item in raw_data.chalices:
-		chalice_names.append(item['name'])
-		glyphs.append(item['glyphs'])
+		glyph_entry = {}
 
+		chalice_names.append(item['name'])
+		glyph_entry['name'] = item['name']
+
+		for a in item['glyphs']:
+			glyph_entry['glyph'] = a['glyph']
+			glyph_entry['notes'] = a['notes']
+		
+		glyphs.append(glyph_entry)
 
 	return render_template('index.html',
 		names=chalice_names,
