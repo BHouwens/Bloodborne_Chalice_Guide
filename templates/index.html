@@ -7,7 +7,15 @@
 <body>
     <div class="wrapper">
         <div class="container">
-            
+        	<nav>
+        		<input type="text" class="name-search" placeholder="Search">
+        		<ul>
+        			<li class="active">{{ names[0] }}</li>
+		            {% for name in names[1:] %}
+						<li>{{ name }}</li>
+		            {% endfor %}
+            	</ul>
+            </nav>
         </div>
     </div>
 </body>
