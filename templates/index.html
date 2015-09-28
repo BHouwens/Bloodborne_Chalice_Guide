@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Bloodborne Chalice Guide</title>
     <link rel="stylesheet" type="text/css" href="../static/styles/main.css"/>
 </head>
@@ -17,12 +19,41 @@
             	</ul>
             </nav>
 
-            {% for glyph in glyphs %}
-            <section class="glyph" data-name="{{ glyph.name }}">
-                <h2>{{ glyph.glyph }}</h2>
-                <p>{{ glyph.notes }}</p>
-            </section>
-            {% endfor %}
+            <div class="glyph-container">
+                {% for glyph in glyphs %}
+                <section class="glyph" data-name="{{ glyph.name }}">
+                    <h2>{{ glyph.glyph }}</h2>
+                    <ul>
+                        {% if glyph.layer1 %}
+                        <li>
+                           <h4>Layer 1</h4>
+                           {{ glyph.layer1 }} 
+                        </li>
+                        {% endif %}
+                        {% if glyph.layer2 %}
+                        <li>
+                           <h4>Layer 2</h4>
+                           {{ glyph.layer2 }} 
+                        </li>
+                        {% endif %}
+                        {% if glyph.layer3 %}
+                        <li>
+                           <h4>Layer 3</h4>
+                           {{ glyph.layer3 }} 
+                        </li>
+                        {% endif %}
+                        {% if glyph.layer4 %}
+                        <li>
+                           <h4>Layer 4</h4>
+                           {{ glyph.layer4 }} 
+                        </li>
+                        {% endif %} 
+                    </ul>
+
+                    <p>{{ glyph.notes }}</p>
+                </section>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>

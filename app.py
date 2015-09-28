@@ -13,14 +13,18 @@ def home():
 
 
 	for item in raw_data.chalices:
-		glyph_entry = {}
-
 		chalice_names.append(item['name'])
-		glyph_entry['name'] = item['name']
 
 		for a in item['glyphs']:
+			glyph_entry = {}
+
+			glyph_entry['name'] = item['name']
 			glyph_entry['glyph'] = a['glyph']
-			glyph_entry['notes'] = a['notes']
+			glyph_entry['layer1'] = a['layer1'][1]
+			glyph_entry['layer2'] = a['layer2'][1]
+			glyph_entry['layer3'] = a['layer3'][1]
+			glyph_entry['layer4'] = a['layer4'][1]
+			glyph_entry['notes'] = a['notes'].decode("utf8")
 		
 			glyphs.append(glyph_entry)
 
@@ -30,4 +34,4 @@ def home():
 
 
 if __name__ == "__main__":
-	app.run()
+	app.run(debug=True)
