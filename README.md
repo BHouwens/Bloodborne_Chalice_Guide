@@ -10,9 +10,8 @@ The game implements a "chalice" mechanic, in which players can descend into vari
 
 The guide requires Python and Pip to be installed and runs on the [Flask](http://flask.pocoo.org/) micro-framework. It's very much still under development.
 
-If you would like to take a quick look, you can run:
+If you would like to take a quick look, you can run the following from the project root:
 
-    cd ~/Bloodborne_Chalice_Guide
     source venv/bin/activate
     pip install -r requirements.txt
     python app.py
