@@ -10,20 +10,21 @@
         	<nav>
         		<input type="text" class="name-search" placeholder="Search">
         		<ul>
-        			<li class="active">{{ names[0] }}</li>
+        			<li class="chalice active">{{ names[0] }}</li>
 		            {% for name in names[1:] %}
-						<li>{{ name }}</li>
+						<li class="chalice">{{ name }}</li>
 		            {% endfor %}
             	</ul>
             </nav>
 
             {% for glyph in glyphs %}
-                {% if glyph.name == names[0] %}
-                    <h1>{{ glyph.glyph }}</h1>
-                    <p>{{ glyph.notes }}</p>
-                {% endif %}
+            <section class="glyph" data-name="{{ glyph.name }}">
+                <h2>{{ glyph.glyph }}</h2>
+                <p>{{ glyph.notes }}</p>
+            </section>
             {% endfor %}
         </div>
     </div>
 </body>
+<script src="static/js/main.js"></script>
 </html>

@@ -22,7 +22,7 @@ def home():
 			glyph_entry['glyph'] = a['glyph']
 			glyph_entry['notes'] = a['notes']
 		
-		glyphs.append(glyph_entry)
+			glyphs.append(glyph_entry)
 
 	return render_template('index.html',
 		names=chalice_names,

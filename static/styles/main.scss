@@ -1,9 +1,11 @@
 @import "base/mixins";
+@import "layout/placeholders";
 
 $main-colour: #989895;
 
 body{
 	background: url('../img/bg.jpg') no-repeat;
+	background-color: #101113;
 }
 
 .wrapper{
@@ -13,11 +15,21 @@ body{
 }
 
 .container{
+	@extend %clearfix;
 	background: rgba(0, 0, 0, 0.65);
 	border: 1px solid #909497;
 	display: block;
 	margin-top: 40px;
 	@include size(100%);
+}
+
+section.hide{
+	display: none;
+}
+
+section{
+	float: left;
+	color: white;
 }
 
 input.name-search {
@@ -29,6 +41,10 @@ input.name-search {
     padding-left: 5px;
     color: $main-colour;
     @include size(208px, 30px);
+}
+
+nav{
+	float: left;
 }
 
 ul{
