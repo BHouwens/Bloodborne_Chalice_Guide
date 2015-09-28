@@ -33,14 +33,7 @@ class Chalice_Builder:
 						new_chalice = self.create_chalice(row)
 						self.chalices.append(new_chalice)
 					else:
-						new_glyph = {}
-
-						new_glyph['glyph'] = row[3]
-						new_glyph['layer1'] = [ row[4], row[8] ]
-						new_glyph['layer2'] = [ row[5], row[9] ]
-						new_glyph['layer3'] = [ row[6], row[10] ]
-						new_glyph['layer4'] = [ row[7], row[11] ]
-						new_glyph['notes'] = row[12]
+						new_glyph = self.create_glyph(row)
 						
 						index = next(index for (index, d) in enumerate(self.chalices) if d["name"] == row[1])
 						self.chalices[index]['glyphs'].append(new_glyph)
@@ -56,6 +49,13 @@ class Chalice_Builder:
 			'glyphs': []
 		}
 
+		new_glyph = self.create_glyph(row)
+		chalice['glyphs'].append(new_glyph)
+
+		return chalice
+
+
+	def create_glyph(self, row):
 		new_glyph = {}
 
 		new_glyph['glyph'] = row[3]
@@ -65,9 +65,9 @@ class Chalice_Builder:
 		new_glyph['layer4'] = [ row[7], row[11] ]
 		new_glyph['notes'] = row[12]
 
-		chalice['glyphs'].append(new_glyph)
+		return new_glyph
 
-		return chalice
+
 
 # Test Chalice_Builder ouput
 if __name__ == "__main__":
