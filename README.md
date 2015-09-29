@@ -4,7 +4,7 @@
 
 GUI chalice guide for the game Bloodborne. 
 
-The game implements a "chalice" mechanic, in which players can descend into various levels, fight monsters, and find loot and items, but because they're so vast and/or labyrinthine it's handy to know where things are ahead of time. This is meant to give players that knowledge.
+The game implements a "chalice" mechanic, in which players can descend into various levels, fight monsters, and find loot and items. These features are randomised for each player, but glyph codes give you the ability to share a specific seed with other players. This is useful if you're looking for a specific item/s and so being able to present the surrounding data in an accessible way is helpful.
 
 ## Using It
 
