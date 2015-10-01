@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from first_reader import Chalice_Builder
+from reader import Chalice_Builder
 
 app = Flask(__name__)
 data_path = 'data/first_data.csv'
@@ -7,7 +7,7 @@ data_path = 'data/first_data.csv'
 
 @app.route('/')
 def home():
-	raw_data = Chalice_Builder(data_path)
+	raw_data = Chalice_Builder('first', data_path)
 	chalice_names = []
 	glyphs = []
 

@@ -2,7 +2,7 @@ import csv
 
 class Chalice_Builder:
 
-	def __init__(self, path):
+	def __init__(self, reader, path):
 		'''
 			Single chalice structure is as follows: 
 
@@ -19,27 +19,49 @@ class Chalice_Builder:
 			}
 
 		'''
-		self.chalices = []
+		self.path = path
+
+		if reader == 'first':
+			self.chalices = self.first_reader(self.path)
+		elif reader == 'second':
+			self.chalices = self.second_reader(self.path)
+
+
+	def first_reader(self, path):
+		chalices = []
 
 		with open(path, 'rb') as data:
 			reader = csv.reader(data, delimiter=',')
 			reader.next()
 
 			for row in reader:
-				if len(self.chalices) > 0:
-					check = next((item for item in self.chalices if item["name"] == row[1]), None)
+				if len(chalices) > 0:
+					check = next((item for item in chalices if item["name"] == row[1]), None)
 
 					if not check:
 						new_chalice = self.create_chalice(row)
-						self.chalices.append(new_chalice)
+						chalices.append(new_chalice)
 					else:
 						new_glyph = self.create_glyph(row)
 						
-						index = next(index for (index, d) in enumerate(self.chalices) if d["name"] == row[1])
-						self.chalices[index]['glyphs'].append(new_glyph)
+						index = next(index for (index, d) in enumerate(chalices) if d["name"] == row[1])
+						chalices[index]['glyphs'].append(new_glyph)
 				else:
 					first_chalice = self.create_chalice(row)
-					self.chalices.append(first_chalice)
+					chalices.append(first_chalice)
+
+		return chalices
+
+	def second_reader(self, path):
+		chalices = []
+
+		with open(path, 'rb') as data:
+			reader = csv.reader(data, delimiter=',')
+			reader.next()
+
+			for row in reader:
+				if len(chalices) > 0:
+					check = next((item for item in chalices if item["name"] == row[2]), None)
 
 
 
