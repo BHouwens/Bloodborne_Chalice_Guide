@@ -71,7 +71,7 @@ class Chalice_Builder:
 
 # Test Chalice_Builder ouput
 if __name__ == "__main__":
-	test = Chalice_Builder('data/data.csv')
+	test = Chalice_Builder('data/first_data.csv')
 	print test.chalices
 
 
